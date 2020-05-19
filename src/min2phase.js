@@ -1,3 +1,5 @@
+console.log("\n---------\nstart");
+
 // var $wnd = $wnd || window.parent;
 // var __gwtModuleFunction = $wnd.org_cubing_min2phase;
 // var $sendStats = __gwtModuleFunction.__sendStats;
@@ -840,10 +842,10 @@ var nextSequentialId = 1;
 //   "JavaScriptExceptionBase",
 //   102
 // );
-// function $clinit_JavaScriptException() {
-//   $clinit_JavaScriptException = emptyMethod;
-//   NOT_SET = new Object_0();
-// }
+function $clinit_JavaScriptException() {
+  $clinit_JavaScriptException = emptyMethod;
+  NOT_SET = new Object_0();
+}
 
 // function $ensureInit(this$static) {
 //   var exception;
@@ -3248,19 +3250,19 @@ function initializeArrayElementsWithDefaults(elementTypeCategory, length_0) {
 //   }
 // }
 
-// function unwrap(e) {
-//   var jse;
-//   if (instanceOf(e, 26)) {
-//     jse = dynamicCast(e, 26);
-//     if (
-//       maskUndefined(jse.e) !==
-//       maskUndefined(($clinit_JavaScriptException(), NOT_SET))
-//     ) {
-//       return maskUndefined(jse.e) === maskUndefined(NOT_SET) ? null : jse.e;
-//     }
-//   }
-//   return e;
-// }
+function unwrap(e) {
+  var jse;
+  if (instanceOf(e, 26)) {
+    jse = dynamicCast(e, 26);
+    if (
+      maskUndefined(jse.e) !==
+      maskUndefined(($clinit_JavaScriptException(), NOT_SET))
+    ) {
+      return maskUndefined(jse.e) === maskUndefined(NOT_SET) ? null : jse.e;
+    }
+  }
+  return e;
+}
 
 function wrap(e) {
   var jse;
@@ -3289,13 +3291,13 @@ function create0(l, m, h) {
   return { l: l, m: m, h: h };
 }
 
-// function add_1(a, b) {
-//   var sum0, sum1, sum2;
-//   sum0 = a.l + b.l;
-//   sum1 = a.m + b.m + (sum0 >> 22);
-//   sum2 = a.h + b.h + (sum1 >> 22);
-//   return { l: sum0 & $intern_9, m: sum1 & $intern_9, h: sum2 & $intern_10 };
-// }
+function add_1(a, b) {
+  var sum0, sum1, sum2;
+  sum0 = a.l + b.l;
+  sum1 = a.m + b.m + (sum0 >> 22);
+  sum2 = a.h + b.h + (sum1 >> 22);
+  return { l: sum0 & $intern_9, m: sum1 & $intern_9, h: sum2 & $intern_10 };
+}
 
 function and(a, b) {
   return { l: a.l & b.l, m: a.m & b.m, h: a.h & b.h };
@@ -3325,26 +3327,26 @@ function fromInt(value_0) {
   return create(value_0);
 }
 
-// function gte(a, b) {
-//   var signa, signb;
-//   signa = a.h >> 19;
-//   signb = b.h >> 19;
-//   return signa == 0
-//     ? signb != 0 ||
-//         a.h > b.h ||
-//         (a.h == b.h && a.m > b.m) ||
-//         (a.h == b.h && a.m == b.m && a.l >= b.l)
-//     : !(
-//         signb == 0 ||
-//         a.h < b.h ||
-//         (a.h == b.h && a.m < b.m) ||
-//         (a.h == b.h && a.m == b.m && a.l < b.l)
-//       );
-// }
+function gte(a, b) {
+  var signa, signb;
+  signa = a.h >> 19;
+  signb = b.h >> 19;
+  return signa == 0
+    ? signb != 0 ||
+        a.h > b.h ||
+        (a.h == b.h && a.m > b.m) ||
+        (a.h == b.h && a.m == b.m && a.l >= b.l)
+    : !(
+        signb == 0 ||
+        a.h < b.h ||
+        (a.h == b.h && a.m < b.m) ||
+        (a.h == b.h && a.m == b.m && a.l < b.l)
+      );
+}
 
-// function neq(a, b) {
-//   return a.l != b.l || a.m != b.m || a.h != b.h;
-// }
+function neq(a, b) {
+  return a.l != b.l || a.m != b.m || a.h != b.h;
+}
 
 function or(a, b) {
   return { l: a.l | b.l, m: a.m | b.m, h: a.h | b.h };
@@ -6994,9 +6996,9 @@ var boxedValues;
 //   "SimpleEventBus/3",
 //   157
 // );
-// function AbstractStringBuilder(string) {
-//   this.string = string;
-// }
+function AbstractStringBuilder(string) {
+  this.string = string;
+}
 
 // defineClass(64, 1, {});
 // _.toString$ = function toString_8() {
@@ -7123,13 +7125,13 @@ var boxedValues;
 // }
 
 // var boxedValues_0;
-// function max_0(x_0, y_0) {
-//   return x_0 > y_0 ? x_0 : y_0;
-// }
+function max_0(x_0, y_0) {
+  return x_0 > y_0 ? x_0 : y_0;
+}
 
-// function min_0(x_0, y_0) {
-//   return x_0 < y_0 ? x_0 : y_0;
-// }
+function min_0(x_0, y_0) {
+  return x_0 < y_0 ? x_0 : y_0;
+}
 
 // function NullPointerException() {
 //   RuntimeException.call(this);
@@ -7176,9 +7178,9 @@ var boxedValues;
 //   );
 // }
 
-// function $indexOf_0(this$static, str) {
-//   return this$static.indexOf(str);
-// }
+function $indexOf_0(this$static, str) {
+  return this$static.indexOf(str);
+}
 
 // function $substring(this$static, beginIndex) {
 //   return __substr(this$static, beginIndex, this$static.length - beginIndex);
@@ -7194,35 +7196,35 @@ var boxedValues;
 //   return this$static.replace(/^[\u0000-\u0020]*|[\u0000-\u0020]*$/g, "");
 // }
 
-// function _String(value_0) {
-//   return __valueOf(value_0, 0, value_0.length);
-// }
+function _String(value_0) {
+  return __valueOf(value_0, 0, value_0.length);
+}
 
 // function __substr(str, beginIndex, len) {
 //   return str.substr(beginIndex, len);
 // }
 
-// function __valueOf(x_0, start_0, end) {
-//   var s = "";
-//   for (var batchStart = start_0; batchStart < end; ) {
-//     var batchEnd = Math.min(batchStart + 10000, end);
-//     s += String.fromCharCode.apply(null, x_0.slice(batchStart, batchEnd));
-//     batchStart = batchEnd;
-//   }
-//   return s;
-// }
+function __valueOf(x_0, start_0, end) {
+  var s = "";
+  for (var batchStart = start_0; batchStart < end; ) {
+    var batchEnd = Math.min(batchStart + 10000, end);
+    s += String.fromCharCode.apply(null, x_0.slice(batchStart, batchEnd));
+    batchStart = batchEnd;
+  }
+  return s;
+}
 
-// function fromCodePoint(codePoint) {
-//   var hiSurrogate, loSurrogate;
-//   if (codePoint >= $intern_12) {
-//     hiSurrogate =
-//       (55296 + (((codePoint - $intern_12) >> 10) & 1023)) & $intern_20;
-//     loSurrogate = (56320 + ((codePoint - $intern_12) & 1023)) & $intern_20;
-//     return valueOf_0(hiSurrogate) + valueOf_0(loSurrogate);
-//   } else {
-//     return String.fromCharCode(codePoint & $intern_20);
-//   }
-// }
+function fromCodePoint(codePoint) {
+  var hiSurrogate, loSurrogate;
+  if (codePoint >= $intern_12) {
+    hiSurrogate =
+      (55296 + (((codePoint - $intern_12) >> 10) & 1023)) & $intern_20;
+    loSurrogate = (56320 + ((codePoint - $intern_12) & 1023)) & $intern_20;
+    return valueOf_0(hiSurrogate) + valueOf_0(loSurrogate);
+  } else {
+    return String.fromCharCode(codePoint & $intern_20);
+  }
+}
 
 // function valueOf_0(x_0) {
 //   return String.fromCharCode(x_0);
@@ -7298,9 +7300,9 @@ function $clinit_String$HashCache() {
 //   return this$static;
 // }
 
-// function StringBuffer() {
-//   AbstractStringBuilder.call(this, "");
-// }
+function StringBuffer() {
+  AbstractStringBuilder.call(this, "");
+}
 
 // defineClass(93, 64, { 246: 1 }, StringBuffer);
 // var Ljava_lang_StringBuffer_2_classLit = createForClass(
@@ -10414,469 +10416,469 @@ var Lorg_cubing_min2phase_client_CubieCube_2_classLit = createForClass(
 //   "Org_cubing_min2phase/1MyHandler/1",
 //   101
 // );
-// function $initPhase2(
-//   this$static,
-//   p2corn,
-//   p2csym,
-//   p2edge,
-//   p2esym,
-//   p2mid,
-//   edgei,
-//   corni
-// ) {
-//   var depth2, i, i0, prun, ret;
-//   prun = max_0(
-//     getPruning(
-//       ($clinit_CoordCube(), EPermCCombPPrun),
-//       (edgei >> 4) * 140 +
-//         CCombPConj[($clinit_CubieCube(), Perm2CombP)[corni >> 4] & 255][
-//           SymMultInv[edgei & 15][corni & 15]
-//         ]
-//     ),
-//     max_0(
-//       getPruning(
-//         EPermCCombPPrun,
-//         p2edge * 140 +
-//           CCombPConj[Perm2CombP[p2corn] & 255][SymMultInv[p2esym][p2csym]]
-//       ),
-//       getPruning(MCPermPrun, p2corn * 24 + MPermConj[p2mid][p2csym])
-//     )
-//   );
-//   if (prun > this$static.maxDep2) {
-//     return prun - this$static.maxDep2;
-//   }
-//   for (depth2 = this$static.maxDep2; depth2 >= prun; depth2--) {
-//     ret = $phase2(
-//       this$static,
-//       p2edge,
-//       p2esym,
-//       p2corn,
-//       p2csym,
-//       p2mid,
-//       depth2,
-//       this$static.depth1,
-//       10
-//     );
-//     if (ret < 0) {
-//       break;
-//     }
-//     depth2 -= ret;
-//     this$static.solLen = 0;
-//     this$static.solution = new Util$Solution();
-//     $setArgs(
-//       this$static.solution,
-//       this$static.verbose,
-//       this$static.urfIdx,
-//       this$static.depth1
-//     );
-//     for (i0 = 0; i0 < this$static.depth1 + depth2; i0++) {
-//       $appendSolMove(this$static.solution, this$static.move[i0]);
-//     }
-//     for (i = this$static.preMoveLen - 1; i >= 0; i--) {
-//       $appendSolMove(this$static.solution, this$static.preMoves[i]);
-//     }
-//     this$static.solLen = this$static.solution.length_0;
-//   }
-//   if (depth2 != this$static.maxDep2) {
-//     this$static.maxDep2 = min_0(
-//       MAX_DEPTH2,
-//       this$static.solLen - this$static.length1 - 1
-//     );
-//     return gte(this$static.probe, this$static.probeMin) ? 0 : 1;
-//   }
-//   return 1;
-// }
+function $initPhase2(
+  this$static,
+  p2corn,
+  p2csym,
+  p2edge,
+  p2esym,
+  p2mid,
+  edgei,
+  corni
+) {
+  var depth2, i, i0, prun, ret;
+  prun = max_0(
+    getPruning(
+      ($clinit_CoordCube(), EPermCCombPPrun),
+      (edgei >> 4) * 140 +
+        CCombPConj[($clinit_CubieCube(), Perm2CombP)[corni >> 4] & 255][
+          SymMultInv[edgei & 15][corni & 15]
+        ]
+    ),
+    max_0(
+      getPruning(
+        EPermCCombPPrun,
+        p2edge * 140 +
+          CCombPConj[Perm2CombP[p2corn] & 255][SymMultInv[p2esym][p2csym]]
+      ),
+      getPruning(MCPermPrun, p2corn * 24 + MPermConj[p2mid][p2csym])
+    )
+  );
+  if (prun > this$static.maxDep2) {
+    return prun - this$static.maxDep2;
+  }
+  for (depth2 = this$static.maxDep2; depth2 >= prun; depth2--) {
+    ret = $phase2(
+      this$static,
+      p2edge,
+      p2esym,
+      p2corn,
+      p2csym,
+      p2mid,
+      depth2,
+      this$static.depth1,
+      10
+    );
+    if (ret < 0) {
+      break;
+    }
+    depth2 -= ret;
+    this$static.solLen = 0;
+    this$static.solution = new Util$Solution();
+    $setArgs(
+      this$static.solution,
+      this$static.verbose,
+      this$static.urfIdx,
+      this$static.depth1
+    );
+    for (i0 = 0; i0 < this$static.depth1 + depth2; i0++) {
+      $appendSolMove(this$static.solution, this$static.move[i0]);
+    }
+    for (i = this$static.preMoveLen - 1; i >= 0; i--) {
+      $appendSolMove(this$static.solution, this$static.preMoves[i]);
+    }
+    this$static.solLen = this$static.solution.length_0;
+  }
+  if (depth2 != this$static.maxDep2) {
+    this$static.maxDep2 = min_0(
+      MAX_DEPTH2,
+      this$static.solLen - this$static.length1 - 1
+    );
+    return gte(this$static.probe, this$static.probeMin) ? 0 : 1;
+  }
+  return 1;
+}
 
-// function $initPhase2Pre(this$static) {
-//   var corni,
-//     edgei,
-//     i,
-//     lastMove,
-//     lastPre,
-//     m,
-//     p2corn,
-//     p2csym,
-//     p2edge,
-//     p2esym,
-//     p2mid,
-//     p2switch,
-//     p2switchMask,
-//     p2switchMax,
-//     ret;
-//   this$static.isRec = false;
-//   if (
-//     gte(
-//       this$static.probe,
-//       !this$static.solution ? this$static.probeMax : this$static.probeMin
-//     )
-//   ) {
-//     return 0;
-//   }
-//   this$static.probe = add_1(this$static.probe, { l: 1, m: 0, h: 0 });
-//   for (i = this$static.valid1; i < this$static.depth1; i++) {
-//     CornMult(
-//       this$static.phase1Cubie[i],
-//       ($clinit_CubieCube(), moveCube)[this$static.move[i]],
-//       this$static.phase1Cubie[i + 1]
-//     );
-//     EdgeMult(
-//       this$static.phase1Cubie[i],
-//       moveCube[this$static.move[i]],
-//       this$static.phase1Cubie[i + 1]
-//     );
-//   }
-//   this$static.valid1 = this$static.depth1;
-//   p2corn = $getCPermSym(this$static.phase1Cubie[this$static.depth1]);
-//   p2csym = p2corn & 15;
-//   p2corn >>= 4;
-//   p2edge = $getEPermSym(this$static.phase1Cubie[this$static.depth1]);
-//   p2esym = p2edge & 15;
-//   p2edge >>= 4;
-//   p2mid =
-//     getNPerm(this$static.phase1Cubie[this$static.depth1].ea, 12, true) % 24;
-//   edgei = getPermSymInv(p2edge, p2esym, false);
-//   corni = getPermSymInv(p2corn, p2csym, true);
-//   lastMove =
-//     this$static.depth1 == 0 ? -1 : this$static.move[this$static.depth1 - 1];
-//   lastPre =
-//     this$static.preMoveLen == 0
-//       ? -1
-//       : this$static.preMoves[this$static.preMoveLen - 1];
-//   ret = 0;
-//   p2switchMax =
-//     (this$static.preMoveLen == 0 ? 1 : 2) * (this$static.depth1 == 0 ? 1 : 2);
-//   for (
-//     p2switch = 0, p2switchMask = (1 << p2switchMax) - 1;
-//     p2switch < p2switchMax;
-//     p2switch++
-//   ) {
-//     if (((p2switchMask >> p2switch) & 1) != 0) {
-//       p2switchMask &= ~(1 << p2switch);
-//       ret = $initPhase2(
-//         this$static,
-//         p2corn,
-//         p2csym,
-//         p2edge,
-//         p2esym,
-//         p2mid,
-//         edgei,
-//         corni
-//       );
-//       if (ret == 0 || ret > 2) {
-//         break;
-//       } else ret == 2 && (p2switchMask &= 4 << p2switch);
-//     }
-//     if (p2switchMask == 0) {
-//       break;
-//     }
-//     if ((p2switch & 1) == 0 && this$static.depth1 > 0) {
-//       m = ($clinit_Util(), std2ud)[~~(lastMove / 3) * 3 + 1];
-//       this$static.move[this$static.depth1 - 1] =
-//         ud2std[m] * 2 - this$static.move[this$static.depth1 - 1];
-//       p2mid = ($clinit_CoordCube(), MPermMove)[p2mid][m];
-//       p2corn = CPermMove[p2corn][($clinit_CubieCube(), SymMoveUD)[p2csym][m]];
-//       p2csym = SymMult[p2corn & 15][p2csym];
-//       p2corn >>= 4;
-//       p2edge = EPermMove[p2edge][SymMoveUD[p2esym][m]];
-//       p2esym = SymMult[p2edge & 15][p2esym];
-//       p2edge >>= 4;
-//       corni = getPermSymInv(p2corn, p2csym, true);
-//       edgei = getPermSymInv(p2edge, p2esym, false);
-//     } else if (this$static.preMoveLen > 0) {
-//       m = ($clinit_Util(), std2ud)[~~(lastPre / 3) * 3 + 1];
-//       this$static.preMoves[this$static.preMoveLen - 1] =
-//         ud2std[m] * 2 - this$static.preMoves[this$static.preMoveLen - 1];
-//       p2mid = ($clinit_CubieCube(), MPermInv)[
-//         ($clinit_CoordCube(), MPermMove)[MPermInv[p2mid]][m]
-//       ];
-//       p2corn = CPermMove[corni >> 4][SymMoveUD[corni & 15][m]];
-//       corni = (p2corn & -16) | SymMult[p2corn & 15][corni & 15];
-//       p2corn = getPermSymInv(corni >> 4, corni & 15, true);
-//       p2csym = p2corn & 15;
-//       p2corn >>= 4;
-//       p2edge = EPermMove[edgei >> 4][SymMoveUD[edgei & 15][m]];
-//       edgei = (p2edge & -16) | SymMult[p2edge & 15][edgei & 15];
-//       p2edge = getPermSymInv(edgei >> 4, edgei & 15, false);
-//       p2esym = p2edge & 15;
-//       p2edge >>= 4;
-//     }
-//   }
-//   this$static.depth1 > 0 &&
-//     (this$static.move[this$static.depth1 - 1] = lastMove);
-//   this$static.preMoveLen > 0 &&
-//     (this$static.preMoves[this$static.preMoveLen - 1] = lastPre);
-//   return ret == 0 ? 0 : 2;
-// }
+function $initPhase2Pre(this$static) {
+  var corni,
+    edgei,
+    i,
+    lastMove,
+    lastPre,
+    m,
+    p2corn,
+    p2csym,
+    p2edge,
+    p2esym,
+    p2mid,
+    p2switch,
+    p2switchMask,
+    p2switchMax,
+    ret;
+  this$static.isRec = false;
+  if (
+    gte(
+      this$static.probe,
+      !this$static.solution ? this$static.probeMax : this$static.probeMin
+    )
+  ) {
+    return 0;
+  }
+  this$static.probe = add_1(this$static.probe, { l: 1, m: 0, h: 0 });
+  for (i = this$static.valid1; i < this$static.depth1; i++) {
+    CornMult(
+      this$static.phase1Cubie[i],
+      ($clinit_CubieCube(), moveCube)[this$static.move[i]],
+      this$static.phase1Cubie[i + 1]
+    );
+    EdgeMult(
+      this$static.phase1Cubie[i],
+      moveCube[this$static.move[i]],
+      this$static.phase1Cubie[i + 1]
+    );
+  }
+  this$static.valid1 = this$static.depth1;
+  p2corn = $getCPermSym(this$static.phase1Cubie[this$static.depth1]);
+  p2csym = p2corn & 15;
+  p2corn >>= 4;
+  p2edge = $getEPermSym(this$static.phase1Cubie[this$static.depth1]);
+  p2esym = p2edge & 15;
+  p2edge >>= 4;
+  p2mid =
+    getNPerm(this$static.phase1Cubie[this$static.depth1].ea, 12, true) % 24;
+  edgei = getPermSymInv(p2edge, p2esym, false);
+  corni = getPermSymInv(p2corn, p2csym, true);
+  lastMove =
+    this$static.depth1 == 0 ? -1 : this$static.move[this$static.depth1 - 1];
+  lastPre =
+    this$static.preMoveLen == 0
+      ? -1
+      : this$static.preMoves[this$static.preMoveLen - 1];
+  ret = 0;
+  p2switchMax =
+    (this$static.preMoveLen == 0 ? 1 : 2) * (this$static.depth1 == 0 ? 1 : 2);
+  for (
+    p2switch = 0, p2switchMask = (1 << p2switchMax) - 1;
+    p2switch < p2switchMax;
+    p2switch++
+  ) {
+    if (((p2switchMask >> p2switch) & 1) != 0) {
+      p2switchMask &= ~(1 << p2switch);
+      ret = $initPhase2(
+        this$static,
+        p2corn,
+        p2csym,
+        p2edge,
+        p2esym,
+        p2mid,
+        edgei,
+        corni
+      );
+      if (ret == 0 || ret > 2) {
+        break;
+      } else ret == 2 && (p2switchMask &= 4 << p2switch);
+    }
+    if (p2switchMask == 0) {
+      break;
+    }
+    if ((p2switch & 1) == 0 && this$static.depth1 > 0) {
+      m = ($clinit_Util(), std2ud)[~~(lastMove / 3) * 3 + 1];
+      this$static.move[this$static.depth1 - 1] =
+        ud2std[m] * 2 - this$static.move[this$static.depth1 - 1];
+      p2mid = ($clinit_CoordCube(), MPermMove)[p2mid][m];
+      p2corn = CPermMove[p2corn][($clinit_CubieCube(), SymMoveUD)[p2csym][m]];
+      p2csym = SymMult[p2corn & 15][p2csym];
+      p2corn >>= 4;
+      p2edge = EPermMove[p2edge][SymMoveUD[p2esym][m]];
+      p2esym = SymMult[p2edge & 15][p2esym];
+      p2edge >>= 4;
+      corni = getPermSymInv(p2corn, p2csym, true);
+      edgei = getPermSymInv(p2edge, p2esym, false);
+    } else if (this$static.preMoveLen > 0) {
+      m = ($clinit_Util(), std2ud)[~~(lastPre / 3) * 3 + 1];
+      this$static.preMoves[this$static.preMoveLen - 1] =
+        ud2std[m] * 2 - this$static.preMoves[this$static.preMoveLen - 1];
+      p2mid = ($clinit_CubieCube(), MPermInv)[
+        ($clinit_CoordCube(), MPermMove)[MPermInv[p2mid]][m]
+      ];
+      p2corn = CPermMove[corni >> 4][SymMoveUD[corni & 15][m]];
+      corni = (p2corn & -16) | SymMult[p2corn & 15][corni & 15];
+      p2corn = getPermSymInv(corni >> 4, corni & 15, true);
+      p2csym = p2corn & 15;
+      p2corn >>= 4;
+      p2edge = EPermMove[edgei >> 4][SymMoveUD[edgei & 15][m]];
+      edgei = (p2edge & -16) | SymMult[p2edge & 15][edgei & 15];
+      p2edge = getPermSymInv(edgei >> 4, edgei & 15, false);
+      p2esym = p2edge & 15;
+      p2edge >>= 4;
+    }
+  }
+  this$static.depth1 > 0 &&
+    (this$static.move[this$static.depth1 - 1] = lastMove);
+  this$static.preMoveLen > 0 &&
+    (this$static.preMoves[this$static.preMoveLen - 1] = lastPre);
+  return ret == 0 ? 0 : 2;
+}
 
-// function $initSearch(this$static) {
-//   var i;
-//   this$static.conjMask = 0;
-//   this$static.selfSym = $selfSymmetry(this$static.cc);
-//   this$static.conjMask |= neq(
-//     and(shr(this$static.selfSym, 16), { l: $intern_20, m: 0, h: 0 }),
-//     { l: 0, m: 0, h: 0 }
-//   )
-//     ? 18
-//     : 0;
-//   this$static.conjMask |= neq(
-//     and(shr(this$static.selfSym, 32), { l: $intern_20, m: 0, h: 0 }),
-//     { l: 0, m: 0, h: 0 }
-//   )
-//     ? 36
-//     : 0;
-//   this$static.conjMask |= neq(
-//     and(shr(this$static.selfSym, 48), { l: $intern_20, m: 0, h: 0 }),
-//     { l: 0, m: 0, h: 0 }
-//   )
-//     ? 56
-//     : 0;
-//   this$static.selfSym = and(this$static.selfSym, {
-//     l: $intern_9,
-//     m: $intern_9,
-//     h: 15,
-//   });
-//   this$static.maxPreMoves = this$static.conjMask > 7 ? 0 : 20;
-//   for (i = 0; i < 6; i++) {
-//     $copy(this$static.urfCubieCube[i], this$static.cc);
-//     $setWithPrun(this$static.urfCoordCube[i], this$static.urfCubieCube[i], 20);
-//     $URFConjugate(this$static.cc);
-//     i % 3 == 2 && $invCubieCube(this$static.cc);
-//   }
-// }
+function $initSearch(this$static) {
+  var i;
+  this$static.conjMask = 0;
+  this$static.selfSym = $selfSymmetry(this$static.cc);
+  this$static.conjMask |= neq(
+    and(shr(this$static.selfSym, 16), { l: $intern_20, m: 0, h: 0 }),
+    { l: 0, m: 0, h: 0 }
+  )
+    ? 18
+    : 0;
+  this$static.conjMask |= neq(
+    and(shr(this$static.selfSym, 32), { l: $intern_20, m: 0, h: 0 }),
+    { l: 0, m: 0, h: 0 }
+  )
+    ? 36
+    : 0;
+  this$static.conjMask |= neq(
+    and(shr(this$static.selfSym, 48), { l: $intern_20, m: 0, h: 0 }),
+    { l: 0, m: 0, h: 0 }
+  )
+    ? 56
+    : 0;
+  this$static.selfSym = and(this$static.selfSym, {
+    l: $intern_9,
+    m: $intern_9,
+    h: 15,
+  });
+  this$static.maxPreMoves = this$static.conjMask > 7 ? 0 : 20;
+  for (i = 0; i < 6; i++) {
+    $copy(this$static.urfCubieCube[i], this$static.cc);
+    $setWithPrun(this$static.urfCoordCube[i], this$static.urfCubieCube[i], 20);
+    $URFConjugate(this$static.cc);
+    i % 3 == 2 && $invCubieCube(this$static.cc);
+  }
+}
 
-// function $phase1(this$static, node, ssym, maxl, lm) {
-//   var axis_0, m, power, prun, ret, skipMoves;
-//   if (node.prun == 0 && maxl < 5) {
-//     if (this$static.allowShorter || maxl == 0) {
-//       this$static.depth1 -= maxl;
-//       ret = $initPhase2Pre(this$static);
-//       this$static.depth1 += maxl;
-//       return ret;
-//     } else {
-//       return 1;
-//     }
-//   }
-//   skipMoves = getSkipMoves(fromInt(ssym));
-//   for (axis_0 = 0; axis_0 < 18; axis_0 += 3) {
-//     if (axis_0 == lm || axis_0 == lm - 9) {
-//       continue;
-//     }
-//     for (power = 0; power < 3; power++) {
-//       m = axis_0 + power;
-//       if (
-//         (this$static.isRec &&
-//           m != this$static.move[this$static.depth1 - maxl]) ||
-//         (skipMoves != 0 && (skipMoves & (1 << m)) != 0)
-//       ) {
-//         continue;
-//       }
-//       prun = $doMovePrun(this$static.nodeUD[maxl], node, m);
-//       if (prun > maxl) {
-//         break;
-//       } else if (prun == maxl) {
-//         continue;
-//       }
-//       prun = $doMovePrunConj(this$static.nodeUD[maxl], node, m);
-//       if (prun > maxl) {
-//         break;
-//       } else if (prun == maxl) {
-//         continue;
-//       }
-//       this$static.move[this$static.depth1 - maxl] = m;
-//       this$static.valid1 = min_0(this$static.valid1, this$static.depth1 - maxl);
-//       ret = $phase1(
-//         this$static,
-//         this$static.nodeUD[maxl],
-//         ssym & toInt(($clinit_CubieCube(), moveCubeSym)[m]),
-//         maxl - 1,
-//         axis_0
-//       );
-//       if (ret == 0) {
-//         return 0;
-//       } else if (ret >= 2) {
-//         break;
-//       }
-//     }
-//   }
-//   return 1;
-// }
+function $phase1(this$static, node, ssym, maxl, lm) {
+  var axis_0, m, power, prun, ret, skipMoves;
+  if (node.prun == 0 && maxl < 5) {
+    if (this$static.allowShorter || maxl == 0) {
+      this$static.depth1 -= maxl;
+      ret = $initPhase2Pre(this$static);
+      this$static.depth1 += maxl;
+      return ret;
+    } else {
+      return 1;
+    }
+  }
+  skipMoves = getSkipMoves(fromInt(ssym));
+  for (axis_0 = 0; axis_0 < 18; axis_0 += 3) {
+    if (axis_0 == lm || axis_0 == lm - 9) {
+      continue;
+    }
+    for (power = 0; power < 3; power++) {
+      m = axis_0 + power;
+      if (
+        (this$static.isRec &&
+          m != this$static.move[this$static.depth1 - maxl]) ||
+        (skipMoves != 0 && (skipMoves & (1 << m)) != 0)
+      ) {
+        continue;
+      }
+      prun = $doMovePrun(this$static.nodeUD[maxl], node, m);
+      if (prun > maxl) {
+        break;
+      } else if (prun == maxl) {
+        continue;
+      }
+      prun = $doMovePrunConj(this$static.nodeUD[maxl], node, m);
+      if (prun > maxl) {
+        break;
+      } else if (prun == maxl) {
+        continue;
+      }
+      this$static.move[this$static.depth1 - maxl] = m;
+      this$static.valid1 = min_0(this$static.valid1, this$static.depth1 - maxl);
+      ret = $phase1(
+        this$static,
+        this$static.nodeUD[maxl],
+        ssym & toInt(($clinit_CubieCube(), moveCubeSym)[m]),
+        maxl - 1,
+        axis_0
+      );
+      if (ret == 0) {
+        return 0;
+      } else if (ret >= 2) {
+        break;
+      }
+    }
+  }
+  return 1;
+}
 
-// function $phase1PreMoves(this$static, maxl, lm, cc, ssym) {
-//   var m, ret, skipMoves;
-//   this$static.preMoveLen = this$static.maxPreMoves - maxl;
-//   if (
-//     this$static.isRec
-//       ? this$static.depth1 == this$static.length1 - this$static.preMoveLen
-//       : this$static.preMoveLen == 0 || ((225207 >> lm) & 1) == 0
-//   ) {
-//     this$static.depth1 = this$static.length1 - this$static.preMoveLen;
-//     this$static.phase1Cubie[0] = cc;
-//     this$static.allowShorter =
-//       this$static.depth1 == MIN_P1LENGTH_PRE && this$static.preMoveLen != 0;
-//     if (
-//       $setWithPrun(
-//         this$static.nodeUD[this$static.depth1 + 1],
-//         cc,
-//         this$static.depth1
-//       ) &&
-//       $phase1(
-//         this$static,
-//         this$static.nodeUD[this$static.depth1 + 1],
-//         ssym,
-//         this$static.depth1,
-//         -1
-//       ) == 0
-//     ) {
-//       return 0;
-//     }
-//   }
-//   if (
-//     maxl == 0 ||
-//     this$static.preMoveLen + MIN_P1LENGTH_PRE >= this$static.length1
-//   ) {
-//     return 1;
-//   }
-//   skipMoves = getSkipMoves(fromInt(ssym));
-//   (maxl == 1 ||
-//     this$static.preMoveLen + 1 + MIN_P1LENGTH_PRE >= this$static.length1) &&
-//     (skipMoves |= 225207);
-//   lm = ~~(lm / 3) * 3;
-//   for (m = 0; m < 18; m++) {
-//     if (m == lm || m == lm - 9 || m == lm + 9) {
-//       m += 2;
-//       continue;
-//     }
-//     if (
-//       (this$static.isRec &&
-//         m != this$static.preMoves[this$static.maxPreMoves - maxl]) ||
-//       (skipMoves & (1 << m)) != 0
-//     ) {
-//       continue;
-//     }
-//     CornMult(
-//       ($clinit_CubieCube(), moveCube)[m],
-//       cc,
-//       this$static.preMoveCubes[maxl]
-//     );
-//     EdgeMult(moveCube[m], cc, this$static.preMoveCubes[maxl]);
-//     this$static.preMoves[this$static.maxPreMoves - maxl] = m;
-//     ret = $phase1PreMoves(
-//       this$static,
-//       maxl - 1,
-//       m,
-//       this$static.preMoveCubes[maxl],
-//       ssym & toInt(moveCubeSym[m])
-//     );
-//     if (ret == 0) {
-//       return 0;
-//     }
-//   }
-//   return 1;
-// }
+function $phase1PreMoves(this$static, maxl, lm, cc, ssym) {
+  var m, ret, skipMoves;
+  this$static.preMoveLen = this$static.maxPreMoves - maxl;
+  if (
+    this$static.isRec
+      ? this$static.depth1 == this$static.length1 - this$static.preMoveLen
+      : this$static.preMoveLen == 0 || ((225207 >> lm) & 1) == 0
+  ) {
+    this$static.depth1 = this$static.length1 - this$static.preMoveLen;
+    this$static.phase1Cubie[0] = cc;
+    this$static.allowShorter =
+      this$static.depth1 == MIN_P1LENGTH_PRE && this$static.preMoveLen != 0;
+    if (
+      $setWithPrun(
+        this$static.nodeUD[this$static.depth1 + 1],
+        cc,
+        this$static.depth1
+      ) &&
+      $phase1(
+        this$static,
+        this$static.nodeUD[this$static.depth1 + 1],
+        ssym,
+        this$static.depth1,
+        -1
+      ) == 0
+    ) {
+      return 0;
+    }
+  }
+  if (
+    maxl == 0 ||
+    this$static.preMoveLen + MIN_P1LENGTH_PRE >= this$static.length1
+  ) {
+    return 1;
+  }
+  skipMoves = getSkipMoves(fromInt(ssym));
+  (maxl == 1 ||
+    this$static.preMoveLen + 1 + MIN_P1LENGTH_PRE >= this$static.length1) &&
+    (skipMoves |= 225207);
+  lm = ~~(lm / 3) * 3;
+  for (m = 0; m < 18; m++) {
+    if (m == lm || m == lm - 9 || m == lm + 9) {
+      m += 2;
+      continue;
+    }
+    if (
+      (this$static.isRec &&
+        m != this$static.preMoves[this$static.maxPreMoves - maxl]) ||
+      (skipMoves & (1 << m)) != 0
+    ) {
+      continue;
+    }
+    CornMult(
+      ($clinit_CubieCube(), moveCube)[m],
+      cc,
+      this$static.preMoveCubes[maxl]
+    );
+    EdgeMult(moveCube[m], cc, this$static.preMoveCubes[maxl]);
+    this$static.preMoves[this$static.maxPreMoves - maxl] = m;
+    ret = $phase1PreMoves(
+      this$static,
+      maxl - 1,
+      m,
+      this$static.preMoveCubes[maxl],
+      ssym & toInt(moveCubeSym[m])
+    );
+    if (ret == 0) {
+      return 0;
+    }
+  }
+  return 1;
+}
 
-// function $phase2(this$static, edge, esym, corn, csym, mid, maxl, depth, lm) {
-//   var corni, cornx, csymx, edgei, edgex, esymx, m, midx, moveMask, prun, ret;
-//   if (edge == 0 && corn == 0 && mid == 0) {
-//     return maxl;
-//   }
-//   moveMask = ($clinit_Util(), ckmv2bit)[lm];
-//   for (m = 0; m < 10; m++) {
-//     if (((moveMask >> m) & 1) != 0) {
-//       m += (66 >> m) & 3;
-//       continue;
-//     }
-//     midx = ($clinit_CoordCube(), MPermMove)[mid][m];
-//     cornx = CPermMove[corn][($clinit_CubieCube(), SymMoveUD)[csym][m]];
-//     csymx = SymMult[cornx & 15][csym];
-//     cornx >>= 4;
-//     edgex = EPermMove[edge][SymMoveUD[esym][m]];
-//     esymx = SymMult[edgex & 15][esym];
-//     edgex >>= 4;
-//     edgei = getPermSymInv(edgex, esymx, false);
-//     corni = getPermSymInv(cornx, csymx, true);
-//     prun = getPruning(
-//       EPermCCombPPrun,
-//       (edgei >> 4) * 140 +
-//         CCombPConj[Perm2CombP[corni >> 4] & 255][
-//           SymMultInv[edgei & 15][corni & 15]
-//         ]
-//     );
-//     if (prun > maxl + 1) {
-//       return maxl - prun + 1;
-//     } else if (prun >= maxl) {
-//       m += (66 >> m) & 3 & (maxl - prun);
-//       continue;
-//     }
-//     prun = max_0(
-//       getPruning(MCPermPrun, cornx * 24 + MPermConj[midx][csymx]),
-//       getPruning(
-//         EPermCCombPPrun,
-//         edgex * 140 +
-//           CCombPConj[Perm2CombP[cornx] & 255][SymMultInv[esymx][csymx]]
-//       )
-//     );
-//     if (prun >= maxl) {
-//       m += (66 >> m) & 3 & (maxl - prun);
-//       continue;
-//     }
-//     ret = $phase2(
-//       this$static,
-//       edgex,
-//       esymx,
-//       cornx,
-//       csymx,
-//       midx,
-//       maxl - 1,
-//       depth + 1,
-//       m
-//     );
-//     if (ret >= 0) {
-//       this$static.move[depth] = ud2std[m];
-//       return ret;
-//     }
-//     if (ret < -2) {
-//       break;
-//     }
-//     ret < -1 && (m += (66 >> m) & 3);
-//   }
-//   return -1;
-// }
+function $phase2(this$static, edge, esym, corn, csym, mid, maxl, depth, lm) {
+  var corni, cornx, csymx, edgei, edgex, esymx, m, midx, moveMask, prun, ret;
+  if (edge == 0 && corn == 0 && mid == 0) {
+    return maxl;
+  }
+  moveMask = ($clinit_Util(), ckmv2bit)[lm];
+  for (m = 0; m < 10; m++) {
+    if (((moveMask >> m) & 1) != 0) {
+      m += (66 >> m) & 3;
+      continue;
+    }
+    midx = ($clinit_CoordCube(), MPermMove)[mid][m];
+    cornx = CPermMove[corn][($clinit_CubieCube(), SymMoveUD)[csym][m]];
+    csymx = SymMult[cornx & 15][csym];
+    cornx >>= 4;
+    edgex = EPermMove[edge][SymMoveUD[esym][m]];
+    esymx = SymMult[edgex & 15][esym];
+    edgex >>= 4;
+    edgei = getPermSymInv(edgex, esymx, false);
+    corni = getPermSymInv(cornx, csymx, true);
+    prun = getPruning(
+      EPermCCombPPrun,
+      (edgei >> 4) * 140 +
+        CCombPConj[Perm2CombP[corni >> 4] & 255][
+          SymMultInv[edgei & 15][corni & 15]
+        ]
+    );
+    if (prun > maxl + 1) {
+      return maxl - prun + 1;
+    } else if (prun >= maxl) {
+      m += (66 >> m) & 3 & (maxl - prun);
+      continue;
+    }
+    prun = max_0(
+      getPruning(MCPermPrun, cornx * 24 + MPermConj[midx][csymx]),
+      getPruning(
+        EPermCCombPPrun,
+        edgex * 140 +
+          CCombPConj[Perm2CombP[cornx] & 255][SymMultInv[esymx][csymx]]
+      )
+    );
+    if (prun >= maxl) {
+      m += (66 >> m) & 3 & (maxl - prun);
+      continue;
+    }
+    ret = $phase2(
+      this$static,
+      edgex,
+      esymx,
+      cornx,
+      csymx,
+      midx,
+      maxl - 1,
+      depth + 1,
+      m
+    );
+    if (ret >= 0) {
+      this$static.move[depth] = ud2std[m];
+      return ret;
+    }
+    if (ret < -2) {
+      break;
+    }
+    ret < -1 && (m += (66 >> m) & 3);
+  }
+  return -1;
+}
 
-// function $search(this$static) {
-//   for (
-//     this$static.length1 = this$static.isRec ? this$static.length1 : 0;
-//     this$static.length1 < this$static.solLen;
-//     this$static.length1++
-//   ) {
-//     this$static.maxDep2 = min_0(
-//       MAX_DEPTH2,
-//       this$static.solLen - this$static.length1 - 1
-//     );
-//     for (
-//       this$static.urfIdx = this$static.isRec ? this$static.urfIdx : 0;
-//       this$static.urfIdx < 6;
-//       this$static.urfIdx++
-//     ) {
-//       if ((this$static.conjMask & (1 << this$static.urfIdx)) != 0) {
-//         continue;
-//       }
-//       if (
-//         $phase1PreMoves(
-//           this$static,
-//           this$static.maxPreMoves,
-//           -30,
-//           this$static.urfCubieCube[this$static.urfIdx],
-//           toInt(and(this$static.selfSym, { l: $intern_20, m: 0, h: 0 }))
-//         ) == 0
-//       ) {
-//         return !this$static.solution
-//           ? "Error 8"
-//           : $toString_2(this$static.solution);
-//       }
-//     }
-//   }
-//   return !this$static.solution ? "Error 7" : $toString_2(this$static.solution);
-// }
+function $search(this$static) {
+  for (
+    this$static.length1 = this$static.isRec ? this$static.length1 : 0;
+    this$static.length1 < this$static.solLen;
+    this$static.length1++
+  ) {
+    this$static.maxDep2 = min_0(
+      MAX_DEPTH2,
+      this$static.solLen - this$static.length1 - 1
+    );
+    for (
+      this$static.urfIdx = this$static.isRec ? this$static.urfIdx : 0;
+      this$static.urfIdx < 6;
+      this$static.urfIdx++
+    ) {
+      if ((this$static.conjMask & (1 << this$static.urfIdx)) != 0) {
+        continue;
+      }
+      if (
+        $phase1PreMoves(
+          this$static,
+          this$static.maxPreMoves,
+          -30,
+          this$static.urfCubieCube[this$static.urfIdx],
+          toInt(and(this$static.selfSym, { l: $intern_20, m: 0, h: 0 }))
+        ) == 0
+      ) {
+        return !this$static.solution
+          ? "Error 8"
+          : $toString_2(this$static.solution);
+      }
+    }
+  }
+  return !this$static.solution ? "Error 7" : $toString_2(this$static.solution);
+}
 
 function $solution(this$static, facelets) {
   var check;
@@ -11025,8 +11027,8 @@ function Search() {
 // _.urfIdx = 0;
 // _.valid1 = 0;
 // _.verbose = 0;
-// var MAX_DEPTH2 = 12,
-//   MIN_P1LENGTH_PRE = 7;
+var MAX_DEPTH2 = 12,
+  MIN_P1LENGTH_PRE = 7;
 // var Lorg_cubing_min2phase_client_Search_2_classLit = createForClass(
 //   "org.cubing.min2phase.client",
 //   "Search",
@@ -11291,140 +11293,140 @@ function setVal(val0, val, isEdge) {
   return ((isEdge ? (val << 1) | (val0 & 1) : val | (val0 & -8)) << 24) >> 24;
 }
 
-// function toCubieCube(f, ccRet) {
-//   $clinit_Util();
-//   var col1, col2, i, i0, i1, i2, j, ori;
-//   for (i0 = 0; i0 < 8; i0++) {
-//     ccRet.ca[i0] = 0;
-//   }
-//   for (i1 = 0; i1 < 12; i1++) {
-//     ccRet.ea[i1] = 0;
-//   }
-//   for (i2 = 0; i2 < 8; i2++) {
-//     for (ori = 0; ori < 3; ori++) {
-//       if (f[cornerFacelet[i2][ori]] == 0 || f[cornerFacelet[i2][ori]] == 3)
-//         break;
-//     }
-//     col1 = f[cornerFacelet[i2][(ori + 1) % 3]];
-//     col2 = f[cornerFacelet[i2][(ori + 2) % 3]];
-//     for (j = 0; j < 8; j++) {
-//       if (
-//         col1 == ~~(cornerFacelet[j][1] / 9) &&
-//         col2 == ~~(cornerFacelet[j][2] / 9)
-//       ) {
-//         ccRet.ca[i2] = narrow_byte((ori % 3 << 3) | j);
-//         break;
-//       }
-//     }
-//   }
-//   for (i = 0; i < 12; i++) {
-//     for (j = 0; j < 12; j++) {
-//       if (
-//         f[edgeFacelet[i][0]] == ~~(edgeFacelet[j][0] / 9) &&
-//         f[edgeFacelet[i][1]] == ~~(edgeFacelet[j][1] / 9)
-//       ) {
-//         ccRet.ea[i] = narrow_byte(j << 1);
-//         break;
-//       }
-//       if (
-//         f[edgeFacelet[i][0]] == ~~(edgeFacelet[j][1] / 9) &&
-//         f[edgeFacelet[i][1]] == ~~(edgeFacelet[j][0] / 9)
-//       ) {
-//         ccRet.ea[i] = narrow_byte((j << 1) | 1);
-//         break;
-//       }
-//     }
-//   }
-// }
+function toCubieCube(f, ccRet) {
+  $clinit_Util();
+  var col1, col2, i, i0, i1, i2, j, ori;
+  for (i0 = 0; i0 < 8; i0++) {
+    ccRet.ca[i0] = 0;
+  }
+  for (i1 = 0; i1 < 12; i1++) {
+    ccRet.ea[i1] = 0;
+  }
+  for (i2 = 0; i2 < 8; i2++) {
+    for (ori = 0; ori < 3; ori++) {
+      if (f[cornerFacelet[i2][ori]] == 0 || f[cornerFacelet[i2][ori]] == 3)
+        break;
+    }
+    col1 = f[cornerFacelet[i2][(ori + 1) % 3]];
+    col2 = f[cornerFacelet[i2][(ori + 2) % 3]];
+    for (j = 0; j < 8; j++) {
+      if (
+        col1 == ~~(cornerFacelet[j][1] / 9) &&
+        col2 == ~~(cornerFacelet[j][2] / 9)
+      ) {
+        ccRet.ca[i2] = narrow_byte((ori % 3 << 3) | j);
+        break;
+      }
+    }
+  }
+  for (i = 0; i < 12; i++) {
+    for (j = 0; j < 12; j++) {
+      if (
+        f[edgeFacelet[i][0]] == ~~(edgeFacelet[j][0] / 9) &&
+        f[edgeFacelet[i][1]] == ~~(edgeFacelet[j][1] / 9)
+      ) {
+        ccRet.ea[i] = narrow_byte(j << 1);
+        break;
+      }
+      if (
+        f[edgeFacelet[i][0]] == ~~(edgeFacelet[j][1] / 9) &&
+        f[edgeFacelet[i][1]] == ~~(edgeFacelet[j][0] / 9)
+      ) {
+        ccRet.ea[i] = narrow_byte((j << 1) | 1);
+        break;
+      }
+    }
+  }
+}
 
 // var Cnk, ckmv2bit, cornerFacelet, edgeFacelet, move2str, std2ud, ud2std;
-// function $appendSolMove(this$static, curMove) {
-//   var axisCur, axisLast, pow_0;
-//   if (this$static.length_0 == 0) {
-//     this$static.moves[this$static.length_0++] = curMove;
-//     return;
-//   }
-//   axisCur = ~~(curMove / 3);
-//   axisLast = ~~(this$static.moves[this$static.length_0 - 1] / 3);
-//   if (axisCur == axisLast) {
-//     pow_0 =
-//       ((curMove % 3) + (this$static.moves[this$static.length_0 - 1] % 3) + 1) %
-//       4;
-//     pow_0 == 3
-//       ? --this$static.length_0
-//       : (this$static.moves[this$static.length_0 - 1] = axisCur * 3 + pow_0);
-//     return;
-//   }
-//   if (
-//     this$static.length_0 > 1 &&
-//     axisCur % 3 == axisLast % 3 &&
-//     axisCur == ~~(this$static.moves[this$static.length_0 - 2] / 3)
-//   ) {
-//     pow_0 =
-//       ((curMove % 3) + (this$static.moves[this$static.length_0 - 2] % 3) + 1) %
-//       4;
-//     if (pow_0 == 3) {
-//       this$static.moves[this$static.length_0 - 2] =
-//         this$static.moves[this$static.length_0 - 1];
-//       --this$static.length_0;
-//     } else {
-//       this$static.moves[this$static.length_0 - 2] = axisCur * 3 + pow_0;
-//     }
-//     return;
-//   }
-//   this$static.moves[this$static.length_0++] = curMove;
-// }
+function $appendSolMove(this$static, curMove) {
+  var axisCur, axisLast, pow_0;
+  if (this$static.length_0 == 0) {
+    this$static.moves[this$static.length_0++] = curMove;
+    return;
+  }
+  axisCur = ~~(curMove / 3);
+  axisLast = ~~(this$static.moves[this$static.length_0 - 1] / 3);
+  if (axisCur == axisLast) {
+    pow_0 =
+      ((curMove % 3) + (this$static.moves[this$static.length_0 - 1] % 3) + 1) %
+      4;
+    pow_0 == 3
+      ? --this$static.length_0
+      : (this$static.moves[this$static.length_0 - 1] = axisCur * 3 + pow_0);
+    return;
+  }
+  if (
+    this$static.length_0 > 1 &&
+    axisCur % 3 == axisLast % 3 &&
+    axisCur == ~~(this$static.moves[this$static.length_0 - 2] / 3)
+  ) {
+    pow_0 =
+      ((curMove % 3) + (this$static.moves[this$static.length_0 - 2] % 3) + 1) %
+      4;
+    if (pow_0 == 3) {
+      this$static.moves[this$static.length_0 - 2] =
+        this$static.moves[this$static.length_0 - 1];
+      --this$static.length_0;
+    } else {
+      this$static.moves[this$static.length_0 - 2] = axisCur * 3 + pow_0;
+    }
+    return;
+  }
+  this$static.moves[this$static.length_0++] = curMove;
+}
 
-// function $setArgs(this$static, verbose, urfIdx, depth1) {
-//   this$static.verbose = verbose;
-//   this$static.urfIdx = urfIdx;
-//   this$static.depth1 = depth1;
-// }
+function $setArgs(this$static, verbose, urfIdx, depth1) {
+  this$static.verbose = verbose;
+  this$static.urfIdx = urfIdx;
+  this$static.depth1 = depth1;
+}
 
-// function $toString_2(this$static) {
-//   var s, sb, urf;
-//   sb = new StringBuffer();
-//   urf =
-//     (this$static.verbose & 2) != 0
-//       ? (this$static.urfIdx + 3) % 6
-//       : this$static.urfIdx;
-//   if (urf < 3) {
-//     for (s = 0; s < this$static.length_0; s++) {
-//       (this$static.verbose & 1) != 0 &&
-//         s == this$static.depth1 &&
-//         ((sb.string += ".  "), sb);
-//       $append(
-//         $append_1(
-//           sb,
-//           ($clinit_Util(), move2str)[
-//             ($clinit_CubieCube(), urfMove)[urf][this$static.moves[s]]
-//           ]
-//         )
-//       );
-//     }
-//   } else {
-//     for (s = this$static.length_0 - 1; s >= 0; s--) {
-//       $append(
-//         $append_1(
-//           sb,
-//           ($clinit_Util(), move2str)[
-//             ($clinit_CubieCube(), urfMove)[urf][this$static.moves[s]]
-//           ]
-//         )
-//       );
-//       (this$static.verbose & 1) != 0 &&
-//         s == this$static.depth1 &&
-//         ((sb.string += ".  "), sb);
-//     }
-//   }
-//   (this$static.verbose & 4) != 0 &&
-//     $append_1($append_0(((sb.string += "("), sb), this$static.length_0), "f)");
-//   return sb.string;
-// }
+function $toString_2(this$static) {
+  var s, sb, urf;
+  sb = new StringBuffer();
+  urf =
+    (this$static.verbose & 2) != 0
+      ? (this$static.urfIdx + 3) % 6
+      : this$static.urfIdx;
+  if (urf < 3) {
+    for (s = 0; s < this$static.length_0; s++) {
+      (this$static.verbose & 1) != 0 &&
+        s == this$static.depth1 &&
+        ((sb.string += ".  "), sb);
+      $append(
+        $append_1(
+          sb,
+          ($clinit_Util(), move2str)[
+            ($clinit_CubieCube(), urfMove)[urf][this$static.moves[s]]
+          ]
+        )
+      );
+    }
+  } else {
+    for (s = this$static.length_0 - 1; s >= 0; s--) {
+      $append(
+        $append_1(
+          sb,
+          ($clinit_Util(), move2str)[
+            ($clinit_CubieCube(), urfMove)[urf][this$static.moves[s]]
+          ]
+        )
+      );
+      (this$static.verbose & 1) != 0 &&
+        s == this$static.depth1 &&
+        ((sb.string += ".  "), sb);
+    }
+  }
+  (this$static.verbose & 4) != 0 &&
+    $append_1($append_0(((sb.string += "("), sb), this$static.length_0), "f)");
+  return sb.string;
+}
 
-// function Util$Solution() {
-//   this.moves = initDim(I_classLit, $intern_27, 0, 31, 7, 1);
-// }
+function Util$Solution() {
+  this.moves = initDim(I_classLit, $intern_27, 0, 31, 7, 1);
+}
 
 // defineClass(150, 1, {}, Util$Solution);
 // _.toString$ = function toString_17() {
@@ -11509,3 +11511,4 @@ function solveState(s) {
 console.log(
   solveState("DUUBULDBFRBFRRULLLBRDFFFBLURDBFDFDRFRULBLUFDURRBLBDUDL")
 );
+console.log("end");
