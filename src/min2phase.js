@@ -12,7 +12,7 @@ var $intern_3 = { 3: 1 },
   $intern_29 = 286331153,
   $intern_30 = { 10: 1, 3: 1 };
 var _;
-prototypesByTypeId_0 = {};
+var prototypesByTypeId_0 = {};
 function typeMarkerFn() {}
 
 function portableObjCreate(obj) {
@@ -1782,6 +1782,31 @@ function initSym2Raw(N_RAW, Sym2Raw, Raw2Sym, SymState, coord) {
   return count;
 }
 
+var CubeSym,
+  EPermR2S,
+  EPermS2R,
+  FlipR2S,
+  FlipS2R,
+  FlipS2RF,
+  MPermInv,
+  Perm2CombP,
+  PermInvEdgeSym,
+  Sym8Move,
+  SymMove_0,
+  SymMoveUD,
+  SymMult,
+  SymMultInv,
+  SymStateFlip,
+  SymStatePerm,
+  SymStateTwist,
+  TwistR2S,
+  TwistS2R,
+  firstMoveSym,
+  moveCube,
+  moveCubeSym,
+  urf1,
+  urf2,
+  urfMove;
 var Lorg_cubing_min2phase_client_CubieCube_2_classLit = createForClass(
   "org.cubing.min2phase.client",
   "CubieCube",
@@ -2711,6 +2736,7 @@ function toCubieCube(f, ccRet) {
   }
 }
 
+var Cnk, ckmv2bit, cornerFacelet, edgeFacelet, move2str, std2ud, ud2std;
 function $appendSolMove(this$static, curMove) {
   var axisCur, axisLast, pow_0;
   if (this$static.length_0 == 0) {
@@ -2819,15 +2845,39 @@ function isValidName(name_0) {
   return name_0.length > 3;
 }
 
-var I_classLit = createForPrimitive("int", "I");
-(Lcom_google_gwt_lang_LongLibBase$LongEmul_2_classLit = createForClass(
-  "com.google.gwt.lang",
-  "LongLibBase/LongEmul",
-  null
-)),
-  (B_classLit = createForPrimitive("byte", "B")),
-  (J_classLit = createForPrimitive("long", "J")),
-  (C_classLit = createForPrimitive("char", "C"));
+var I_classLit = createForPrimitive("int", "I"),
+  Lcom_google_gwt_lang_CollapsedPropertyHolder_2_classLit = createForClass(
+    "com.google.gwt.lang",
+    "CollapsedPropertyHolder",
+    252
+  ),
+  Lcom_google_gwt_lang_JavaClassHierarchySetupUtil_2_classLit = createForClass(
+    "com.google.gwt.lang",
+    "JavaClassHierarchySetupUtil",
+    254
+  ),
+  Lcom_google_gwt_lang_LongLibBase$LongEmul_2_classLit = createForClass(
+    "com.google.gwt.lang",
+    "LongLibBase/LongEmul",
+    null
+  ),
+  Lcom_google_gwt_lang_ModuleUtils_2_classLit = createForClass(
+    "com.google.gwt.lang",
+    "ModuleUtils",
+    257
+  ),
+  B_classLit = createForPrimitive("byte", "B"),
+  J_classLit = createForPrimitive("long", "J"),
+  C_classLit = createForPrimitive("char", "C"),
+  Lcom_google_gwt_user_client_rpc_XsrfToken_2_classLit = createForClass(
+    "com.google.gwt.user.client.rpc",
+    "XsrfToken",
+    null
+  ),
+  Ljava_util_Map$Entry_2_classLit = createForInterface(
+    "java.util",
+    "Map/Entry"
+  );
 
 function solveState(s) {
   return $solution(new Search(), s);
