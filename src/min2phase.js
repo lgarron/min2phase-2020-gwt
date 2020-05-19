@@ -2819,39 +2819,15 @@ function isValidName(name_0) {
   return name_0.length > 3;
 }
 
-var I_classLit = createForPrimitive("int", "I"),
-  Lcom_google_gwt_lang_CollapsedPropertyHolder_2_classLit = createForClass(
-    "com.google.gwt.lang",
-    "CollapsedPropertyHolder",
-    252
-  ),
-  Lcom_google_gwt_lang_JavaClassHierarchySetupUtil_2_classLit = createForClass(
-    "com.google.gwt.lang",
-    "JavaClassHierarchySetupUtil",
-    254
-  ),
-  Lcom_google_gwt_lang_LongLibBase$LongEmul_2_classLit = createForClass(
-    "com.google.gwt.lang",
-    "LongLibBase/LongEmul",
-    null
-  ),
-  Lcom_google_gwt_lang_ModuleUtils_2_classLit = createForClass(
-    "com.google.gwt.lang",
-    "ModuleUtils",
-    257
-  ),
-  B_classLit = createForPrimitive("byte", "B"),
-  J_classLit = createForPrimitive("long", "J"),
-  C_classLit = createForPrimitive("char", "C"),
-  Lcom_google_gwt_user_client_rpc_XsrfToken_2_classLit = createForClass(
-    "com.google.gwt.user.client.rpc",
-    "XsrfToken",
-    null
-  ),
-  Ljava_util_Map$Entry_2_classLit = createForInterface(
-    "java.util",
-    "Map/Entry"
-  );
+var I_classLit = createForPrimitive("int", "I");
+(Lcom_google_gwt_lang_LongLibBase$LongEmul_2_classLit = createForClass(
+  "com.google.gwt.lang",
+  "LongLibBase/LongEmul",
+  null
+)),
+  (B_classLit = createForPrimitive("byte", "B")),
+  (J_classLit = createForPrimitive("long", "J")),
+  (C_classLit = createForPrimitive("char", "C"));
 
 function solveState(s) {
   return $solution(new Search(), s);
