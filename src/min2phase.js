@@ -7285,20 +7285,20 @@ function $clinit_String$HashCache() {
 // var back_0,
 //   count_0 = 0,
 //   front;
-// function $append(this$static) {
-//   this$static.string += " ";
-//   return this$static;
-// }
+function $append(this$static) {
+  this$static.string += " ";
+  return this$static;
+}
 
 // function $append_0(this$static, x_0) {
 //   this$static.string += x_0;
 //   return this$static;
 // }
 
-// function $append_1(this$static, x_0) {
-//   this$static.string += x_0;
-//   return this$static;
-// }
+function $append_1(this$static, x_0) {
+  this$static.string += x_0;
+  return this$static;
+}
 
 function StringBuffer() {
   AbstractStringBuilder.call(this, "");
@@ -11010,30 +11010,30 @@ function Search() {
   }
 }
 
-// defineClass(72, 1, {}, Search);
-// _.allowShorter = false;
-// _.conjMask = 0;
-// _.depth1 = 0;
-// _.isRec = false;
-// _.length1 = 0;
-// _.maxDep2 = 0;
-// _.maxPreMoves = 0;
-// _.preMoveLen = 0;
-// _.probe = { l: 0, m: 0, h: 0 };
-// _.probeMax = { l: 0, m: 0, h: 0 };
-// _.probeMin = { l: 0, m: 0, h: 0 };
-// _.selfSym = { l: 0, m: 0, h: 0 };
-// _.solLen = 0;
-// _.urfIdx = 0;
-// _.valid1 = 0;
-// _.verbose = 0;
+defineClass(72, 1, {}, Search);
+_.allowShorter = false;
+_.conjMask = 0;
+_.depth1 = 0;
+_.isRec = false;
+_.length1 = 0;
+_.maxDep2 = 0;
+_.maxPreMoves = 0;
+_.preMoveLen = 0;
+_.probe = { l: 0, m: 0, h: 0 };
+_.probeMax = { l: 0, m: 0, h: 0 };
+_.probeMin = { l: 0, m: 0, h: 0 };
+_.selfSym = { l: 0, m: 0, h: 0 };
+_.solLen = 0;
+_.urfIdx = 0;
+_.valid1 = 0;
+_.verbose = 0;
 var MAX_DEPTH2 = 12,
   MIN_P1LENGTH_PRE = 7;
-// var Lorg_cubing_min2phase_client_Search_2_classLit = createForClass(
-//   "org.cubing.min2phase.client",
-//   "Search",
-//   72
-// );
+var Lorg_cubing_min2phase_client_Search_2_classLit = createForClass(
+  "org.cubing.min2phase.client",
+  "Search",
+  72
+);
 function $clinit_Util() {
   $clinit_Util = emptyMethod;
   var i, i0, i1, ix, j, jx;
@@ -11428,25 +11428,25 @@ function Util$Solution() {
   this.moves = initDim(I_classLit, $intern_27, 0, 31, 7, 1);
 }
 
-// defineClass(150, 1, {}, Util$Solution);
-// _.toString$ = function toString_17() {
-//   return $toString_2(this);
-// };
-// _.depth1 = 0;
-// _.length_0 = 0;
-// _.urfIdx = 0;
-// _.verbose = 0;
-// var Lorg_cubing_min2phase_client_Util$Solution_2_classLit = createForClass(
-//   "org.cubing.min2phase.client",
-//   "Util/Solution",
-//   150
-// );
-// function isValidName(name_0) {
-//   if (name_0 == null) {
-//     return false;
-//   }
-//   return name_0.length > 3;
-// }
+defineClass(150, 1, {}, Util$Solution);
+_.toString$ = function toString_17() {
+  return $toString_2(this);
+};
+_.depth1 = 0;
+_.length_0 = 0;
+_.urfIdx = 0;
+_.verbose = 0;
+var Lorg_cubing_min2phase_client_Util$Solution_2_classLit = createForClass(
+  "org.cubing.min2phase.client",
+  "Util/Solution",
+  150
+);
+function isValidName(name_0) {
+  if (name_0 == null) {
+    return false;
+  }
+  return name_0.length > 3;
+}
 
 var I_classLit = createForPrimitive("int", "I"),
   Lcom_google_gwt_lang_CollapsedPropertyHolder_2_classLit = createForClass(
